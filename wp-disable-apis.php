@@ -20,8 +20,10 @@ remove_action( 'xmlrpc_rsd_apis', 'rest_output_rsd' );
 remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
 remove_action( 'template_redirect', 'rest_output_link_header', 11 );
 
-if ( defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST ) )
+if ( defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST ) {
   exit;
+}
 
-if ( defined( 'REST_REQUEST' ) && REST_REQUEST ) )
+if ( defined( 'REST_REQUEST' ) && REST_REQUEST ){
   exit;
+}
