@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Disable APIs
- * Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
+ * Plugin URI: https://github.com/Gummibeer/wp_disable_apis
  * Description: Disables the REST-API and XMLRPC to secure your Wordpress installation.
  * Version: 1.0
  * Author: Gummibeer
