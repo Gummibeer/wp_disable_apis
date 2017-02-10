@@ -9,21 +9,21 @@
  * License: MIT
 */
 
-add_filter( 'xmlrpc_enabled', '__return_false' );
-add_filter( 'json_enabled', '__return_false' );
-add_filter( 'json_jsonp_enabled', '__return_false' );
-add_filter( 'rest_enabled', '__return_false' );
-add_filter( 'rest_jsonp_enabled', '__return_false' );
+add_filter('xmlrpc_enabled', '__return_false');
+add_filter('json_enabled', '__return_false');
+add_filter('json_jsonp_enabled', '__return_false');
+add_filter('rest_enabled', '__return_false');
+add_filter('rest_jsonp_enabled', '__return_false');
 
-remove_action( 'wp_head', 'rsd_link' );
-remove_action( 'xmlrpc_rsd_apis', 'rest_output_rsd' );
-remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
-remove_action( 'template_redirect', 'rest_output_link_header', 11 );
+remove_action('wp_head', 'rsd_link');
+remove_action('xmlrpc_rsd_apis', 'rest_output_rsd');
+remove_action('wp_head', 'rest_output_link_wp_head', 10);
+remove_action('template_redirect', 'rest_output_link_header', 11);
 
-if ( defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST ) {
-  exit;
+if (defined('XMLRPC_REQUEST') && XMLRPC_REQUEST) {
+    exit;
 }
 
-if ( defined( 'REST_REQUEST' ) && REST_REQUEST ){
-  exit;
+if (defined('REST_REQUEST') && REST_REQUEST) {
+    exit;
 }
